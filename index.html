@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    *{
+        margin : 0;
+        padding : 0;
+    }
+    body{
+        background-color: rgb(0,0,33);
+        color:white;
+        font-family: 'Poppins',sans-serif;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 70px;
+        background-color: rgb(4, 4, 99);
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li{
+        list-style: none;
+        margin: 0 23px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    nav ul li a:hover{
+        color: rgb(163, 163, 237);
+        font-size: 1.20rem;
+        background-color: rgba(217, 217, 225, 0.1); 
+        border-radius: 10px;
+        padding: 5px 10px;
+    }
+    main hr {
+        border:0;
+        background: #9c97f1;
+        height: 1.2px;
+        margin : 60px 84px;
+    }
+    .left{
+        font-size: 1.5rem;
+    }
+    .firstsection{
+        display: flex;
+        justify-content: space-around;
+        margin: 90px 0;
+        align-items: center;
+    }
+    .firstsection >div{
+        width:30%;
+    }
+    .leftsection{
+        font-size: 2.5rem;
+    }
+    .leftsection .buttons{
+        padding: 46px 0;
+    }
+    .leftsection .btn{
+        padding : 12px;
+        background-color: #1e2167;
+        color: white;
+        border : 2px solid white;
+        border-radius: 6px;
+        font-size: 20px;
+        cursor : pointer;
+    }
+    .rightsection img{
+        width: 100%;
+        margin : 50px 0;
+    }
+    .purple{
+        color : rgb(166, 106, 222);
+    }
+    .text-gray{
+        color:gray;
+        font-size : 0.9rem;
+    }
+    #element{
+        color : rgb(166, 106, 222);
+    }
+    .secondSection{
+        max-width: 80vw;
+        margin: auto;  
+        height: 80vh; 
+    }
+    .secondSection h1{
+        font-size: 2.4rem;
+    }
+    .secondSection .box{
+        background: white;
+        width: 78vw;
+        height : 2px;
+        margin : 75px 0;
+        display: flex;
+    }
+    .secondSection .vertical{
+        height : 93px;
+        width: 1px;
+        background-color: white;
+        margin: 0 120px;
+    }
+    .image-top{
+        width:50px;
+        position: relative;
+        top : -50px;
+        left : -22px;
+    }
+    .vertical-title{
+        position: relative;
+        top : 50px;
+        width : 150px;
+        font-size: 15.5px;
+    }
+    .vertical-desc{
+        position: relative;
+        top : 86px;
+        color : gray;
+        width : 150px;
+        font-size: 10px;
+    }
+    footer{
+        background-color: #0e0e1a;
+    }
+    .footer{
+        display: flex;
+        padding: 23px 122px;
+        justify-content: space-evenly;
+    }
+    .footer ul{
+        list-style : none;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .footer > div{
+        width:223px;
+    }
+    footer .footer-rights{
+        text-align: center;
+        color:gray;
+        padding : 12px 0;
+    }
+
+    .contact-section {
+        background-color: #0e0e1a;
+        padding: 50px 84px;
+        color: white;
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+    .contact-section h2 {
+        font-size: 2rem;
+        color: white;
+    }
+    
+    .contact-section .contact-description {
+        color: gray;
+        font-size: 1rem;
+        margin: 10px 0 30px;
+    }
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        max-width: 500px;
+        padding: 12px;
+        border: 1px solid #1e2167;
+        border-radius: 5px;
+        background-color: #26297e;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+        color: #9c97f1;
+    }
+    
+    .contact-form .contact-btn {
+        padding: 10px 25px;
+        background-color: #a66ade;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        
+    }
+    
+    .contact-form .contact-btn:hover {
+        background-color: #8159af;
+        transition: background-color 0.3s;
+    }
+    .projects-section {
+        max-width: 80vw;
+        margin: auto;  
+        height: auto;
+    }
+    
+    .projects-section h1 {
+        font-size: 2.4rem;
+    }
+    
+    .projects-description {
+        font-size: 1rem;
+        color: gray;
+        margin-bottom: 40px;
+    }
+    
+    .projects-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 30px;
+        
+    }
+    .project-card {
+        background-color: rgb(4, 4, 99);
+        border: 2px solid #1e2167;
+        border-radius: 10px;
+        width: 250px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .project-card:hover {
+        transform: scale(1.05); /* Grows slightly on hover */
+        box-shadow: 0 8px 16px #62637e; /* Adds a shadow effect */
+        border-color: #3a3da5; /* Changes border color on hover */
+    }
+    
+    
+    .project-image {
+        width: 100%;
+        height: 10rem;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
+        color: gray;
+    }
+    .buttons {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    .button:hover{
+        transform: scale(1.2);
+    }
+    
+    .socials-section {
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    .socials-heading {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: white; /* Adjust to match theme */
+    }
+    
+    .social-icons {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .social-icon img {
+        width: 50px;  /* Adjust icon size as needed */
+        height: 50px;
+        transition: transform 0.3s;
+    }
+    
+    .social-icon img:hover {
+        transform: scale(1.2);
+    }
+    
+    
+    
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left" id="home">Developer Portfolio</div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            
+            
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection" id="about">
+            <div class="leftsection">
+                Hi, My name is<span class="purple"> Heet</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <br>
+                <div class="buttons">
+                    <a href="https://drive.google.com/file/d/1t4DNboytDGJR0XPgppKVwAlMQOw5ZW8q/view" class="btn" download>Download Resume</a>
+                    <a href="https://github.com/heet2604" class="btn" target="_blank">GitHub</a>
+                </div>
+                <div class="socials-section">
+                    <h3 class="socials-heading">Socials</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/heet_26.04/" target="_blank" class="social-icon"><img src="instagram.png" alt="Instagram"></a>
+                        <a href="https://www.linkedin.com/in/heetdudhwala707/" target="_blank" class="social-icon"><img src="linked.png" alt="LinkedIn"></a>
+                        <a href="https://leetcode.com/u/Heet_Dudhwala/" target="_blank" class="social-icon"><img src="leetcode.jpeg" alt="Leetcode"></a>
+                        <a href="https://www.hackerrank.com/profile/heetdudhwala848" target="_blank" class="social-icon"><img src="hack.avif" alt="Hackerrank"></a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="rightsection">
+                <img src="developer.png">   
+            </div>
+        </section>
+        <hr>
+        <section class="projects-section" id="projects">
+            <span class="text-gray">Here are some of the projects I've worked on, showcasing my skills and creativity</span>
+            <h1>Projects</h1>
+            <div class="projects-container">
+                <a href="https://heet2604.github.io/SimonGame/" target="blank"><div class="project-card">
+                    <img src="simon.png" alt="Project 1 Screenshot" class="project-image">
+                    <h3>Simon Game</h3>
+                    <p class="project-description">User-friendly memory game | Technologies used: HTML, CSS, JavaScript, etc.</p>
+                </div></a>
+                <a href="https://github.com/mohdhamzaabbasi/HireEase" target="blank"><div class="project-card">
+                    <img src="hireease.png" alt="Project 2 Screenshot" class="project-image">
+                    <h3>HireEase</h3>
+                    <p class="project-description">Campus Coordinator Website | Technologies used: HTML, CSS, Node.js, MySQL, Express.js etc.</p>
+                </div></a>
+                <div class="project-card">
+                    <img src="cerebro.png" alt="Project 2 Screenshot" class="project-image">
+                    <h3>CerebroSync</h3>
+                    <p class="project-description">Utility Website | Technologies used: React, Node.js, MongoDB, etc.</p>
+                </div>
+                <a href="https://github.com/heet2604/microplastic-classifier" target="blank"><div class="project-card">
+                    <img src="microoo.jpeg" alt="Project 2 Screenshot" class="project-image">
+                    <h3>Microplastic Segregator</h3>
+                    <p class="project-description">Machine Learning Model | Technologies used: Python, Yolov8, Roboflow, etc.</p>
+                </div></a>
+                <a href="https://github.com/heet2604/JOBKANGURU" target="blank"><div class="project-card">
+                    <img src="logo-removebg-preview.png" alt="Project 2 Screenshot" class="project-image">
+                    <h3>JobKanguru</h3>
+                    <p class="project-description">Professional Networking Application | Technologies used: Java, JDBC, MySQL etc.</p>
+                </a>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+
+        <section class="secondSection" id="experience">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="pngwing.com.png">
+                    <div class="vertical-title">
+                        HTML Developer (2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Enthusiastic HTML developer with one year of hands-on experience, building various web projects. 
+                        Focused on creating clean, functional, and responsive designs while continuously learning and improving skills.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="js.png">
+                    <div class="vertical-title">
+                        Frontend Developer (2022-2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Frontend developer with a year of hands-on experience in HTML, CSS, and JavaScript, creating responsive and user-friendly web projects. 
+                        Passionate about building seamless interfaces and continuously learning new skills.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="node.png">
+                    <div class="vertical-title">
+                        Backend Developer (2023-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Backend developer skilled in React.js and Node.js, with hands-on experience in HTML, CSS, and JavaScript. 
+                        Built projects showcasing my technical growth and commitment to quality code.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="mernn.png">
+                    <div class="vertical-title">
+                        MERN Stack (2023-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Passionate MERN stack developer with hands-on experience in building responsive web applications using MongoDB, Express.js, React.js, and Node.js. 
+                        Adapt at both front-end and back-end development, with a focus on delivering efficient solutions.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="machine.png">
+                    <div class="vertical-title">
+                        Machine Learning (2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Passionate about machine learning with a strong interest in developing algorithms and models to solve real-world problems. 
+                        Continuously learning and exploring new techniques in data analysis and AI to stay at the forefront of the field.
+                    </div>
+
+                </div>
+            </div>
+        </section>  
+        <section class="contact-section" id="contact">
+            <h2>Contact Me</h2>
+            <p class="contact-description">I'd love to hear from you! Feel free to reach out with any questions or project opportunities.</p>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="f5c85922-eb6b-444f-9491-8406facbc175">
+                <input type="text" name="name" placeholder="Your Name" required >
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <button type="submit" class="contact-btn">Send Message</button>
+            </form>
+        </section>        
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Heet's Developer Portfolio</h3>
+            </div>
+            
+            <div class="footer-second">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>  
+            <div class="footer-third">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-rights">
+            Copyright &#169 heetsportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer', '&amp; Programmer','&amp; ML enthusiast.'],
+          typeSpeed: 50,
+        });
+      </script>
+</body>
+</html>
